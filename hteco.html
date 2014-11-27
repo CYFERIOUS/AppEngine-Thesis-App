@@ -31,6 +31,7 @@ var aro3 = new Area(q,3);
 var aro4 = new Area(q,4);
 var aro5 = new Area(q,5);
 var aro6 = new Area(q,6);
+var aro7 = new Area(q,7);
 }
 
 ////////////////////////////////////////CREO LAS MATERIAS/////////////////////////////////////////////////////
@@ -38,6 +39,7 @@ var aro6 = new Area(q,6);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var primero = new Array();
+
 primero[0]=new Materia(1,signarum[0],codice[0],visa[0],area1);
 primero[1]=new Materia(1,signarum[1],codice[1],visa[1],area2);
 primero[2]=new Materia(1,signarum[2],codice[2],visa[2],area2);
@@ -63,65 +65,91 @@ tercero[4]=new Materia(3,signarum[16],codice[16],visa[16],area5);
 
 var cuarto = new Array();
 cuarto[0]=new Materia(4,signarum[17],codice[17],visa[17],area1);
+cuarto[1]=new Materia(4,signarum[18],codice[18],visa[17],area1);
+cuarto[2]=new Materia(4,signarum[19],codice[19],visa[17],area2);
+cuarto[3]=new Materia(4,signarum[20],codice[17],visa[17],area3);
+cuarto[4]=new Materia(4,signarum[21],codice[17],visa[17],area3);
 
 var quinto = new Array();
-quinto[0]=new Materia(5,signarum[17],codice[17],visa[17],area1);
+quinto[0]=new Materia(5,signarum[22],codice[22],visa[22],area1);
+quinto[1]=new Materia(5,signarum[23],codice[23],visa[23],area1);
+quinto[2]=new Materia(5,signarum[24],codice[24],visa[24],area3);
+quinto[3]=new Materia(5,signarum[25],codice[25],visa[25],area3);
+quinto[4]=new Materia(5,signarum[26],codice[26],visa[26],area5);
+quinto[5]=new Materia(5,signarum[27],codice[27],visa[27],area5);
 
 var sexto = new Array();
-sexto[0]=new Materia(6,signarum[17],codice[17],visa[17],area1);
+sexto[0]=new Materia(6,signarum[28],codice[28],visa[28],area1);
+sexto[1]=new Materia(6,signarum[29],codice[29],visa[29],area3);
+sexto[2]=new Materia(6,signarum[30],codice[30],visa[30],area3);
+sexto[3]=new Materia(6,signarum[31],codice[31],visa[31],area3);
+sexto[4]=new Materia(6,signarum[32],codice[32],visa[32],area3);
 
 var septimo = new Array();
-septimo[0]=new Materia(7,signarum[17],codice[17],visa[17],area1);
+septimo[0]=new Materia(7,signarum[33],codice[33],visa[33],area3);
+septimo[1]=new Materia(7,signarum[34],codice[34],visa[34],area3);
+septimo[2]=new Materia(7,signarum[35],codice[35],visa[35],area3);
+septimo[3]=new Materia(7,signarum[36],codice[36],visa[36],area3);
+septimo[4]=new Materia(7,signarum[37],codice[37],visa[37],area3);
 
 var octavo = new Array();
-octavo[0]=new Materia(8,signarum[17],codice[17],visa[17],area1);
+octavo[0]=new Materia(8,signarum[38],codice[38],visa[38],area2);
+octavo[1]=new Materia(8,signarum[39],codice[39],visa[39],area3);
+octavo[2]=new Materia(8,signarum[40],codice[40],visa[40],area3);
+octavo[3]=new Materia(8,signarum[41],codice[41],visa[41],area3);
+octavo[4]=new Materia(8,signarum[42],codice[42],visa[42],area3);
+octavo[5]=new Materia(8,signarum[43],codice[43],visa[43],area3);
 
 var noveno = new Array();
-noveno[0]=new Materia(9,signarum[17],codice[17],visa[17],area1);
+noveno[0]=new Materia(9,signarum[44],codice[44],visa[44],area3);
+noveno[1]=new Materia(9,signarum[45],codice[45],visa[45],area3);
+noveno[2]=new Materia(9,signarum[46],codice[46],visa[46],area3);
+noveno[3]=new Materia(9,signarum[47],codice[47],visa[47],area3);
+noveno[4]=new Materia(9,signarum[48],codice[48],visa[48],area4);
 
 var decimo = new Array();
-decimo[0]=new Materia(10,signarum[17],codice[17],visa[17],area1);
+decimo[0]=new Materia(10,signarum[49],codice[49],visa[49],area2);
+decimo[1]=new Materia(10,signarum[50],codice[50],visa[50],area2);
+decimo[2]=new Materia(10,signarum[51],codice[51],visa[51],area3);
+decimo[3]=new Materia(10,signarum[52],codice[52],visa[52],area3);
+decimo[4]=new Materia(10,signarum[53],codice[53],visa[53],area4);
 
 
 ///////CREO LOS SEMESTRES///////////////////////////////
 var o;
 ///PRIMERO
 for(o=0;o<primero.length;o++){
-
-		var semestre1 = new Semestre(semestral[0],102,primero[o],1, o);
+var semestre1 = new Semestre(primero[o]);
 }
 ///SEGUNDO
 for(o=0;o<segundo.length;o++){
-	
-		var semestre2 = new Semestre(semestral[1],204,segundo[o],2, o);
+var semestre2 = new Semestre(segundo[o]);
 }
 ///TERCERO
 for(o=0;o<tercero.length;o++){
-	
-		var semestre3 = new Semestre(semestral[2],306,tercero[o],3, o);
+var semestre3 = new Semestre(tercero[o]);
 }
 /////CUARTO
 for(o=0;o<cuarto.length;o++){
-var semestre4 = new Semestre(semestral[3],408,cuarto[o],4, o);
+var semestre4 = new Semestre(cuarto[o]);
 }
-
 for(o=0;o<quinto.length;o++){
-var semestre5 = new Semestre(semestral[4],510,quinto[o],5, o);
+var semestre5 = new Semestre(quinto[o]);
 }
 for(o=0;o<sexto.length;o++){
-var semestre6 = new Semestre(semestral[5],612,sexto[o],6, o);
+var semestre6 = new Semestre(sexto[o]);
 }
 for(o=0;o<septimo.length;o++){
-var semestre7 = new Semestre(semestral[6],714,septimo[o],7, o);
+var semestre7 = new Semestre(septimo[o]);
 }
 for(o=0;o<octavo.length;o++){
-var semestre8 = new Semestre(semestral[7],816,octavo[o],8, o);
+var semestre8 = new Semestre(octavo[o]);
 }
 for(o=0;o<noveno.length;o++){
-var semestre9 = new Semestre(semestral[8],918,noveno[o],9, o);
+var semestre9 = new Semestre(noveno[o]);
 }
 for(o=0;o<decimo.length;o++){
-var semestre10 = new Semestre(semestral[9],1020,decimo[o],10, o);
+var semestre10 = new Semestre(decimo[o]);
 }
 </script>
 </body>

@@ -40,31 +40,48 @@
   };
   
 AreaBig.prototype = {};
-//////CREACION DE STAGE DE AREAS POR SEMESTRE////////////////////////////////////////////////////
+//////CREACION DE STAGE DE SEMESTRES POR AREA////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
  var Area = function(q,areo){
  this.areo = areo;
+
  	var containerArea = document.createElement('div');
-	containerArea.id = "areaStage"+q;
-	containerArea.style.marginLeft = (q-1)*101+"px";
+	 containerArea.id = "basicas" + q;
+	
+	var containerArea2 = document.createElement('div');
+	containerArea2.id = "ciencias"+q;
+	
+	var containerArea3 = document.createElement('div');
+	containerArea3.id = "aplicadas"+q;
+	
+	var containerArea4 = document.createElement('div');
+	containerArea4.id = "economicas"+q;
+	
+	var containerArea5 = document.createElement('div');
+	containerArea5.id = "humanisticas"+q;
+	
+	var containerArea6 = document.createElement('div');
+	containerArea6.id = "complementarias"+q;
+	
+	
 	switch(areo){
 	case 1:
 	document.getElementById("areaBig1").appendChild(containerArea);
 	break;
 	case 2:
-	document.getElementById("areaBig2").appendChild(containerArea);
+	document.getElementById("areaBig2").appendChild(containerArea2);
 	break;
 	case 3:
-	document.getElementById("areaBig3").appendChild(containerArea);
+	document.getElementById("areaBig3").appendChild(containerArea3);
 	break;
 	case 4:
-	document.getElementById("areaBig4").appendChild(containerArea);
+	document.getElementById("areaBig4").appendChild(containerArea4);
 	break;
 	case 5:
-	document.getElementById("areaBig5").appendChild(containerArea);
+	document.getElementById("areaBig5").appendChild(containerArea5);
 	break;
 	case 6:
-	document.getElementById("areaBig6").appendChild(containerArea);
+	document.getElementById("areaBig6").appendChild(containerArea6);
 	break;
 	}
 };
@@ -72,64 +89,251 @@ Area.prototype = {};
 
 //////CREACION DE STAGE DE SEMESTRE//////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-var Semestre = function(nivel,lefto,materias,ed, cont){
+var Semestre = function(materias){
 	
-	this.nivel = nivel;
-	this.lefto = lefto;
-	this.bloque = materias;
-	this.ed = ed;
-	this.cont = cont;
-	
-	if(cont == 0 ){
-		var containerSem = document.createElement('div');
-		containerSem.id = "semestre"+ ed;
-		containerSem.innerHTML = nivel;
-		containerSem.style.left = lefto + "px";
-	}
 	////////the signatures//////////////////////
 	var signarum = document.createElement("div");
+	signarum.className ="bloque";
 	////////CLASIFICO EN AREAS//////////////////////////////////////////////////
 	if(materias.pipo=="CIENCIAS BASICAS"){
-	 document.getElementById("areaBig1").appendChild(containerArea);
+	if(materias.semes==1){
+	document.getElementById("basicas1").appendChild(signarum);
 	}
+	if(materias.semes==2){
+	document.getElementById("basicas2").appendChild(signarum);
+	}
+	if(materias.semes==3){
+	document.getElementById("basicas3").appendChild(signarum);
+	}
+	if(materias.semes==4){
+	document.getElementById("basicas4").appendChild(signarum);
+	}
+	if(materias.semes==5){
+	 document.getElementById("basicas5").appendChild(signarum);
+	}
+	if(materias.semes==6){
+	 document.getElementById("basicas6").appendChild(signarum);
+	}
+	if(materias.semes==7){
+	 document.getElementById("basicas7").appendChild(signarum);
+	}
+	if(materias.semes==8){
+	 document.getElementById("basicas8").appendChild(signarum);
+	}
+	if(materias.semes==9){
+	 document.getElementById("basicas9").appendChild(signarum);
+	}
+	if(materias.semes==10){
+	document.getElementById("basicas10").appendChild(signarum);
+	}	
+	}
+	
+	
+	/////////////////////////////////////////////////////////////////////////
 	if(materias.pipo=="CIENCIAS DE LA INGENIERIA"){
-	document.getElementById("areaBig2").appendChild(containerArea);
+	if(materias.semes==1){
+	document.getElementById("ciencias"+1).appendChild(signarum);
 	}
+	if(materias.semes==2){
+	document.getElementById("ciencias"+2).appendChild(signarum);
+	}
+	if(materias.semes==3){
+	document.getElementById("ciencias"+3).appendChild(signarum);
+	}
+	if(materias.semes==4){
+	document.getElementById("ciencias"+4).appendChild(signarum);
+	}
+	if(materias.semes==5){
+	 document.getElementById("ciencias"+5).appendChild(signarum);
+	}
+	if(materias.semes==6){
+	 document.getElementById("ciencias"+6).appendChild(signarum);
+	}
+	if(materias.semes==7){
+	 document.getElementById("ciencias"+7).appendChild(signarum);
+	}
+	if(materias.semes==8){
+	 document.getElementById("ciencias"+8).appendChild(signarum);
+	}
+	if(materias.semes==9){
+	 document.getElementById("ciencias"+9).appendChild(signarum);
+	}
+	if(materias.semes==10){
+	document.getElementById("ciencias"+10).appendChild(signarum);
+	}	
+	}
+	///////////////////////////////////////////////////////////////////////////////////////////////
 	if(materias.pipo=="INGENIERIA APLICADA"){
+	if(materias.semes==1){
 
-	document.getElementById("areaBig3").appendChild(containerArea);
+	document.getElementById("aplicadas"+1).appendChild(signarum);
 	}
+	if(materias.semes==2){
+
+	document.getElementById("aplicadas"+2).appendChild(signarum);
+	}
+	if(materias.semes==3){
+
+	document.getElementById("aplicadas"+3).appendChild(signarum);
+	}
+	if(materias.semes==4){
+
+	document.getElementById("aplicadas"+4).appendChild(signarum);
+	}
+	if(materias.semes==5){
+
+	 document.getElementById("aplicadas"+5).appendChild(signarum);
+	}
+	if(materias.semes==6){
+
+	 document.getElementById("aplicadas"+6).appendChild(signarum);
+	}
+	if(materias.semes==7){
+
+	 document.getElementById("aplicadas"+7).appendChild(signarum);
+	}
+	if(materias.semes==8){
+
+	 document.getElementById("aplicadas"+8).appendChild(signarum);
+	}
+	if(materias.semes==9){
+
+	 document.getElementById("aplicadas"+9).appendChild(signarum);
+	}
+	if(materias.semes==10){
+
+	document.getElementById("aplicadas"+10).appendChild(signarum);
+	}	
+	}
+	/////////////////////////////////////////////////////////////////////////////
 	if(materias.pipo=="ECONOMICO ADMINISTRATIVA"){
-	
-	document.getElementById("areaBig4").appendChild(containerArea);
+	if(materias.semes==1){
+
+	document.getElementById("economicas"+1).appendChild(signarum);
 	}
-	if(materias.pipo=="SOCIO HUMANISTICA"){
-	
-	document.getElementById("areaBig5").appendChild(containerArea);
+	if(materias.semes==2){
+
+	document.getElementById("economicas"+2).appendChild(signarum);
 	}
-	if(materias.pipo=="COMPLEMENTARIA"){
-	
-	document.getElementById("areaBig6").appendChild(containerArea);
+	if(materias.semes==3){
+
+	document.getElementById("economicas"+3).appendChild(signarum);
 	}
-	////////CLASIFICO EN SEMESTRES//////////////////////////////////////////////////
-	/*switch(materias.semes){
-	case 1:
-	signarum.className ="bloque1"
-	popa1 = document.getElementById("areaStage"+1).appendChild(signarum);
-	break;
-	case 2:
-	signarum.className ="bloque2";
-	popa2 =document.getElementById("areaStage"+2).appendChild(signarum);
-	break;
-	case 3:
-	signarum.className ="bloque3";
-	popa3 =document.getElementById("areaStage"+3).appendChild(signarum);
-	break;
-	case 4:
-	signarum.className ="bloque4";
-	document.getElementById("areaStage"+4).appendChild(signarum);
-	break;
-	}*/
+	if(materias.semes==4){
+
+	document.getElementById("economicas"+4).appendChild(signarum);
+	}
+	if(materias.semes==5){
+
+	 document.getElementById("economicas"+5).appendChild(signarum);
+	}
+	if(materias.semes==6){
+
+	 document.getElementById("economicas"+6).appendChild(signarum);
+	}
+	if(materias.semes==7){
+
+	 document.getElementById("economicas"+7).appendChild(signarum);
+	}
+	if(materias.semes==8){
+
+	 document.getElementById("economicas"+8).appendChild(signarum);
+	}
+	if(materias.semes==9){
+
+	 document.getElementById("economicas"+9).appendChild(signarum);
+	}
+	if(materias.semes==10){
+
+	document.getElementById("economicas"+10).appendChild(signarum);
+	}	
+	}
+	/////////////////////////////////////////////////////////////////////////////
+		if(materias.pipo=="SOCIO HUMANISTICA"){
+	if(materias.semes==1){
+
+	document.getElementById("humanisticas"+1).appendChild(signarum);
+	}
+	if(materias.semes==2){
+
+	document.getElementById("humanisticas"+2).appendChild(signarum);
+	}
+	if(materias.semes==3){
+
+	document.getElementById("humanisticas"+3).appendChild(signarum);
+	}
+	if(materias.semes==4){
+
+	document.getElementById("humanisticas"+4).appendChild(signarum);
+	}
+	if(materias.semes==5){
+
+	 document.getElementById("humanisticas"+5).appendChild(signarum);
+	}
+	if(materias.semes==6){
+
+	 document.getElementById("humanisticas"+6).appendChild(signarum);
+	}
+	if(materias.semes==7){
+
+	 document.getElementById("humanisticas"+7).appendChild(signarum);
+	}
+	if(materias.semes==8){
+
+	 document.getElementById("humanisticas"+8).appendChild(signarum);
+	}
+	if(materias.semes==9){
+
+	 document.getElementById("humanisticas"+9).appendChild(signarum);
+	}
+	if(materias.semes==10){
+
+	document.getElementById("humanisticas"+10).appendChild(signarum);
+	}	
+	}
+	////////////////////////////////////////////////////////////////////////////
+		if(materias.pipo=="COMPLEMENTARIA"){
+	if(materias.semes==1){
+
+	document.getElementById("complementarias"+1).appendChild(signarum);
+	}
+	if(materias.semes==2){
+
+	document.getElementById("complementarias"+2).appendChild(signarum);
+	}
+	if(materias.semes==3){
+
+	document.getElementById("complementarias"+3).appendChild(signarum);
+	}
+	if(materias.semes==4){
+
+	document.getElementById("complementarias"+4).appendChild(signarum);
+	}
+	if(materias.semes==5){
+
+	 document.getElementById("complementarias"+5).appendChild(signarum);
+	}
+	if(materias.semes==6){
+
+	 document.getElementById("complementarias"+6).appendChild(signarum);
+	}
+	if(materias.semes==7){
+
+	 document.getElementById("complementarias"+7).appendChild(signarum);
+	}
+	if(materias.semes==8){
+
+	 document.getElementById("complementarias"+8).appendChild(signarum);
+	}
+	if(materias.semes==9){
+
+	 document.getElementById("complementarias"+9).appendChild(signarum);
+	}
+	if(materias.semes==10){
+
+	document.getElementById("complementarias"+10).appendChild(signarum);
+	}	
+	}
 	
 	signarum.innerHTML = materias.bloque.innerHTML;
 	signarum.style.cursor = "pointer";
