@@ -13,13 +13,29 @@
 ///////CREO EL ESCENARIO///////////////////////////////
 var escenario = new Stage("#0D5333","UNIVERSIDAD MILITAR NUEVA GRANADA","::FACULTAD DE INGENIERIA EN MULTIMEDIA");
 
+
+
 ///////CREO LAS AREAS///////////////////////////////
-var area1 = new Area("#FFEE1D",areae[0],1);
-var area2 = new Area("#1FF4FF",areae[1],2);
-var area3 = new Area("#FF8E06",areae[2],3);
-var area4 = new Area("#FF0DF9",areae[3],4);
-var area5 = new Area("#b3ff9f",areae[4],5);
-var area6 = new Area("#036BDD",areae[5],6);
+var area1 = new AreaBig("#FFEE1D",areae[0],1);
+var area2 = new AreaBig("#1FF4FF",areae[1],2);
+var area3 = new AreaBig("#FF8E06",areae[2],3);
+var area4 = new AreaBig("#FF0DF9",areae[3],4);
+var area5 = new AreaBig("#b3ff9f",areae[4],5);
+var area6 = new AreaBig("#036BDD",areae[5],6);
+
+var q;
+for(q=0;q<=10;q++){
+var aro1 = new Area(q,1);
+var aro2 = new Area(q,2);
+var aro3 = new Area(q,3);
+var aro4 = new Area(q,4);
+var aro5 = new Area(q,5);
+var aro6 = new Area(q,6);
+}
+
+////////////////////////////////////////CREO LAS MATERIAS/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var primero = new Array();
 primero[0]=new Materia(1,signarum[0],codice[0],visa[0],area1);
@@ -72,42 +88,41 @@ var o;
 ///PRIMERO
 for(o=0;o<primero.length;o++){
 
-		var semestre1 = new Semestre(semestral[0],102,primero[o],1);
+		var semestre1 = new Semestre(semestral[0],102,primero[o],1, o);
 }
 ///SEGUNDO
 for(o=0;o<segundo.length;o++){
 	
-		var semestre2 = new Semestre(semestral[1],204,segundo[o],2);
+		var semestre2 = new Semestre(semestral[1],204,segundo[o],2, o);
 }
 ///TERCERO
 for(o=0;o<tercero.length;o++){
 	
-		var semestre3 = new Semestre(semestral[2],306,tercero[o],3);
+		var semestre3 = new Semestre(semestral[2],306,tercero[o],3, o);
 }
 /////CUARTO
 for(o=0;o<cuarto.length;o++){
-var semestre4 = new Semestre(semestral[3],408,cuarto[o],4);
+var semestre4 = new Semestre(semestral[3],408,cuarto[o],4, o);
 }
 
 for(o=0;o<quinto.length;o++){
-var semestre5 = new Semestre(semestral[4],510,quinto[o],5);
+var semestre5 = new Semestre(semestral[4],510,quinto[o],5, o);
 }
 for(o=0;o<sexto.length;o++){
-var semestre6 = new Semestre(semestral[5],612,sexto[o],6);
+var semestre6 = new Semestre(semestral[5],612,sexto[o],6, o);
 }
 for(o=0;o<septimo.length;o++){
-var semestre7 = new Semestre(semestral[6],714,septimo[o],7);
+var semestre7 = new Semestre(semestral[6],714,septimo[o],7, o);
 }
 for(o=0;o<octavo.length;o++){
-var semestre8 = new Semestre(semestral[7],816,octavo[o],8);
+var semestre8 = new Semestre(semestral[7],816,octavo[o],8, o);
 }
 for(o=0;o<noveno.length;o++){
-var semestre9 = new Semestre(semestral[8],918,noveno[o],9);
+var semestre9 = new Semestre(semestral[8],918,noveno[o],9, o);
 }
 for(o=0;o<decimo.length;o++){
-var semestre10 = new Semestre(semestral[9],1020,decimo[o],10);
+var semestre10 = new Semestre(semestral[9],1020,decimo[o],10, o);
 }
-
 </script>
 </body>
 </html>

@@ -6,8 +6,6 @@
 	height:80px;
 
 }
-
-
 #imagos{
 	background-image:url(logo.jpg);
 	background-repeat:no-repeat;
@@ -30,8 +28,7 @@
 	font-size: 12px;
 	font-weight: bolder;
 	color: #000;	
-}
-	
+}	
 #semestre1,#semestre2,#semestre3,#semestre4,#semestre5,#semestre6,#semestre7,#semestre8,#semestre9,#semestre10{
 	top: 60px;
 	background-color: #C3CED8;
@@ -43,12 +40,9 @@
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 9px;
 	font-weight: bolder;
-	
-	
 }
-
-
-#areaStage1,#areaStage2,#areaStage3,#areaStage4,#areaStage5,#areaStage6{
+#areaBig1,#areaBig2,#areaBig3,#areaBig4,#areaBig5,#areaBig6{
+	
 	width: 1012px;
 	border-bottom-style: solid;
 	border-bottom-color: #900;
@@ -56,9 +50,20 @@
 	font-size: 8px;
 	font-weight: bolder;
 	padding-left:100px;
-
 }
-
+#areaStage1{
+	/*esta area siempre va aparte y permite que las otras floten a su derecha*/
+	background-color:#CCC;
+	width: 100px;
+	height:300px;
+	
+}
+#areaStage2,#areaStage3,#areaStage4,#areaStage5,#areaStage6,#areaStage7,#areaStage8,#areaStage9,#areaStage10{
+	margin-top: -300px;
+	background-color: #CCC;
+	width: 100px;
+	height: 300px;
+}
 #card{
 	width:auto;
 	height:auto;
@@ -74,8 +79,31 @@ div[class^="bloque"]{
 	border-bottom-color: #000;
 }
 
-.bloque1,.bloque2,.bloque3,.bloque4{
-	margin-left:0px;
+.bloque1{
+width:100px;
+height:600px;
+background-color:#0C6;
 
-	clear:left;
+	
+}
+.bloque2{
+
+
+
+}
+.bloque3{
+	
+	
+
+}
+.bloque4{
+
+
+}
+
+#probo1{
+	width:300px;
+	height:600px;
+	background-color:#039;
+
 }

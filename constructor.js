@@ -24,115 +24,123 @@
 	containerTotal.appendChild(codus);
 	
   };
+  Stage.prototype = {};
+ 
+ ///////////////////////////////////////////////////////////////////////////
+ var AreaBig = function(colore,space,ed){
+	 
+	this.colore = colore;
+	this.space = space;
+	this.name = name;
+ 	var areaBig = document.createElement('div');
+	areaBig.id = "areaBig"+ ed;
+	areaBig.innerHTML = space;
+	areaBig.style.backgroundColor = colore;
+	document.getElementById("stage").appendChild(areaBig);
+  };
   
-   Stage.prototype = {
+AreaBig.prototype = {};
+//////CREACION DE STAGE DE AREAS POR SEMESTRE////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+ var Area = function(q,areo){
+ this.areo = areo;
+ 	var containerArea = document.createElement('div');
+	containerArea.id = "areaStage"+q;
+	containerArea.style.marginLeft = (q-1)*101+"px";
+	switch(areo){
+	case 1:
+	document.getElementById("areaBig1").appendChild(containerArea);
+	break;
+	case 2:
+	document.getElementById("areaBig2").appendChild(containerArea);
+	break;
+	case 3:
+	document.getElementById("areaBig3").appendChild(containerArea);
+	break;
+	case 4:
+	document.getElementById("areaBig4").appendChild(containerArea);
+	break;
+	case 5:
+	document.getElementById("areaBig5").appendChild(containerArea);
+	break;
+	case 6:
+	document.getElementById("areaBig6").appendChild(containerArea);
+	break;
+	}
+};
+Area.prototype = {};
 
- };
 //////CREACION DE STAGE DE SEMESTRE//////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-
-
-
- var Semestre = function(nivel,lefto,materias,ed){
+var Semestre = function(nivel,lefto,materias,ed, cont){
 	
 	this.nivel = nivel;
 	this.lefto = lefto;
 	this.bloque = materias;
 	this.ed = ed;
+	this.cont = cont;
 	
- 	var containerSem = document.createElement('div');
-	containerSem.id = "semestre"+ ed;
-	containerSem.innerHTML = nivel;
-	containerSem.style.left = lefto + "px";
-	document.body.appendChild(containerSem); 
-	
-
+	if(cont == 0 ){
+		var containerSem = document.createElement('div');
+		containerSem.id = "semestre"+ ed;
+		containerSem.innerHTML = nivel;
+		containerSem.style.left = lefto + "px";
+	}
 	////////the signatures//////////////////////
 	var signarum = document.createElement("div");
-	var signarum2 = document.createElement("div");
-	var signarum3 = document.createElement("div");
-	var signarum4 = document.createElement("div");
-	////////CLASIFICO EN SEMESTRES//////////////////////////////////////////////////
-	switch(materias.semes){
-	case 1:
-	signarum.className ="bloque1";
-	containerSem = document.getElementById("semestre"+1).appendChild(signarum);
-
-	break;
-	case 2:
-	signarum2.className ="bloque2";
-	containerSem =document.getElementById("semestre"+2).appendChild(signarum2);
-
-	break;
-	case 3:
-	signarum3.className ="bloque3";
-	containerSem = document.getElementById("semestre"+3).appendChild(signarum3);
-	
-	break;
-	case 4:
-	signarum4.className ="bloque4";
-	 containerSem = document.getElementById("semestre"+4).appendChild(signarum4);
-	 
-	break;
-	}
-	signarum.innerHTML = materias.bloque.innerHTML;
-	signarum2.innerHTML = materias.bloque.innerHTML;
-	signarum3.innerHTML = materias.bloque.innerHTML;
-	signarum4.innerHTML = materias.bloque.innerHTML;
-	//signatos.style.cursor = "pointer";
-			
-	//document.getElementById("semestre"+materias.semes).appendChild(signarum);
-
 	////////CLASIFICO EN AREAS//////////////////////////////////////////////////
 	if(materias.pipo=="CIENCIAS BASICAS"){
-	document.getElementById("areaStage1").appendChild(containerSem);
+	 document.getElementById("areaBig1").appendChild(containerArea);
 	}
 	if(materias.pipo=="CIENCIAS DE LA INGENIERIA"){
-	document.getElementById("areaStage2").appendChild(containerSem);
+	document.getElementById("areaBig2").appendChild(containerArea);
 	}
 	if(materias.pipo=="INGENIERIA APLICADA"){
-	document.getElementById("areaStage3").appendChild(containerSem);
+
+	document.getElementById("areaBig3").appendChild(containerArea);
 	}
 	if(materias.pipo=="ECONOMICO ADMINISTRATIVA"){
-	document.getElementById("areaStage4").appendChild(containerSem);
+	
+	document.getElementById("areaBig4").appendChild(containerArea);
 	}
 	if(materias.pipo=="SOCIO HUMANISTICA"){
-	document.getElementById("areaStage5").appendChild(containerSem);
+	
+	document.getElementById("areaBig5").appendChild(containerArea);
 	}
 	if(materias.pipo=="COMPLEMENTARIA"){
-	document.getElementById("areaStage6").appendChild(containerSem);
+	
+	document.getElementById("areaBig6").appendChild(containerArea);
 	}
+	////////CLASIFICO EN SEMESTRES//////////////////////////////////////////////////
+	/*switch(materias.semes){
+	case 1:
+	signarum.className ="bloque1"
+	popa1 = document.getElementById("areaStage"+1).appendChild(signarum);
+	break;
+	case 2:
+	signarum.className ="bloque2";
+	popa2 =document.getElementById("areaStage"+2).appendChild(signarum);
+	break;
+	case 3:
+	signarum.className ="bloque3";
+	popa3 =document.getElementById("areaStage"+3).appendChild(signarum);
+	break;
+	case 4:
+	signarum.className ="bloque4";
+	document.getElementById("areaStage"+4).appendChild(signarum);
+	break;
+	}*/
+	
+	signarum.innerHTML = materias.bloque.innerHTML;
+	signarum.style.cursor = "pointer";
   };
-  
-   Semestre.prototype = {
+   Semestre.prototype = {};
+ 
 
- };
-//////CREACION DE STAGE DE AREAS POR SEMESTRE/////////////////////////
-////////////////////////////////////////////////////////////////////////
- var Area = function(colore, space, ed){
-	
-	this.colore = colore;
-	this.space = space;
-	this.name = name;
-	
- 	var containerArea = document.createElement('div');
-	containerArea.id = "areaStage"+ ed;
-	containerArea.innerHTML = space;
-	containerArea.style.backgroundColor = colore;
-	document.getElementById("stage").appendChild(containerArea);  
-	
-	
-	///////contains signature data////////////////
 
-	
-  };
-  
-   Area.prototype = {
-	   	
- };
 
-//////CREACION DE STAGE DE MATERIAS POR SEMESTRE/////////////////////////
-////////////////////////////////////////////////////////////////////////
+////CREACION DE STAGE DE MATERIAS POR SEMESTRE/////////////////////////
+//////////////////////////////////////////////////////////////////////
   var Materia = function(semes,matter,codigo,credos,area){
 	
 	this.semes = semes;
@@ -141,20 +149,19 @@
 	this.credos = credos;
 	this.area = area;
 	this.pipo = area.space;
-	////container of signature
+	///container of signature
  	var signat = document.createElement('div');
 	this.bloque = signat;
 	signat.id = "signos";
 	signat.innerHTML = matter;
 	signat.style.backgroundColor = "#000";
-	//document.body.appendChild(signat);  aqui no la pinto, la pinto en semestre.
 	
-	//////////////////container signature code//////////////////////////
+	//////////////////////////container signature code
 	var codus=document.createElement("div");
 	var node=document.createTextNode(codigo);
 	codus.appendChild(node);
 	signat.appendChild(codus);
-	/////////////////contains credit of signature///////////////////////
+	///////////////////////contains credit of signature/
 	var credios=document.createElement("div");
 	credios.id ="card";
 	var numus=document.createTextNode(credos);
@@ -162,9 +169,4 @@
 	signat.appendChild(credios);
   
   };
-  
-  
-   Materia.prototype = {
-	  
-	
- };
+   Materia.prototype = {};
