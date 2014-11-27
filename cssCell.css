@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+#cabezote{
+	background-color:#f3f4f6;
+	width:1112px;
+	height:80px;
+
+}
+
+
+#imagos{
+	background-image:url(logo.jpg);
+	background-repeat:no-repeat;
+	width: 64px;
+	height:80px;
+	top:0px;
+	float: left;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+#stage{
+	width:1112px;
+	height:768px;
+	border-bottom-style:solid;
+	border-bottom-color:#900;
+	text-align:center;
+	text-decoration:overline;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #000;	
+}
+	
+#semestre1,#semestre2,#semestre3,#semestre4,#semestre5,#semestre6,#semestre7,#semestre8,#semestre9,#semestre10{
+	top: 60px;
+	background-color: #C3CED8;
+	width: 100px;
+	height: auto;
+	position: absolute;
+	text-align: center;
+	text-decoration: overline;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 9px;
+	font-weight: bolder;
+	
+	
+}
+
+
+#areaStage1,#areaStage2,#areaStage3,#areaStage4,#areaStage5,#areaStage6{
+	width: 1012px;
+	border-bottom-style: solid;
+	border-bottom-color: #900;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 8px;
+	font-weight: bolder;
+	padding-left:100px;
+
+}
+
+#card{
+	width:auto;
+	height:auto;
+	background-color:#0099FF;
+	float: right;
+}
+
+div[class^="bloque"]{
+	width: 100px;
+	height: 60px;
+	background-color: #0099FF;
+	border-bottom-style: inset;
+	border-bottom-color: #000;
+}
+
+.bloque1,.bloque2,.bloque3,.bloque4{
+	margin-left:0px;
+
+	clear:left;
+}
