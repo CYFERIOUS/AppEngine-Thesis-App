@@ -188,6 +188,10 @@ visa[51]="0000";
 visa[52]="0000";
 visa[53]="0000";
 
+
+
+
+
 //////info de cada materiaSE MONTA EN EL GREYBOX//////
 var moduloInfo = new Array();
 moduloInfo[0]="nombre de la materia";

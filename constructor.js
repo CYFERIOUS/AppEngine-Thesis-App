@@ -34,7 +34,8 @@
 	this.name = name;
  	var areaBig = document.createElement('div');
 	areaBig.id = "areaBig"+ ed;
-	areaBig.innerHTML = space;
+	areaBig.className = "areaBig"; 
+	//areaBig.innerHTML = space;
 	areaBig.style.backgroundColor = colore;
 	document.getElementById("stage").appendChild(areaBig);
   };
@@ -46,22 +47,28 @@ AreaBig.prototype = {};
  this.areo = areo;
 
  	var containerArea = document.createElement('div');
-	 containerArea.id = "basicas" + q;
+	containerArea.id = "basicas" + q;
+	containerArea.className = "basicas";
 	
 	var containerArea2 = document.createElement('div');
 	containerArea2.id = "ciencias"+q;
+	containerArea2.className = "ciencias";
 	
 	var containerArea3 = document.createElement('div');
 	containerArea3.id = "aplicadas"+q;
+	containerArea3.className = "aplicadas";
 	
 	var containerArea4 = document.createElement('div');
 	containerArea4.id = "economicas"+q;
+	containerArea4.className = "economicas";
 	
 	var containerArea5 = document.createElement('div');
 	containerArea5.id = "humanisticas"+q;
+	containerArea5.className = "humanisticas";
 	
 	var containerArea6 = document.createElement('div');
 	containerArea6.id = "complementarias"+q;
+	containerArea6.className = "complementarias";
 	
 	
 	switch(areo){
@@ -371,6 +378,10 @@ var Semestre = function(materias){
 	var numus=document.createTextNode(credos);
 	credios.appendChild(numus);
 	signat.appendChild(credios);
-  
+	
+	var pre=document.createElement("div");
+	pre.className = "prq";
+	pre.innerHTML = "<embed src='flecha.svg' type='image/svg+xml' />";
+  	signat.appendChild(pre);
   };
    Materia.prototype = {};

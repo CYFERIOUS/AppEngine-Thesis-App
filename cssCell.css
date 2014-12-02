@@ -30,7 +30,7 @@
 	color: #000;	
 }	
 
-#areaBig1,#areaBig2,#areaBig3,#areaBig4,#areaBig5,#areaBig6{
+.areaBig{
 	
 	width: 1012px;
 	height:auto;
@@ -43,44 +43,46 @@
 	padding-left:100px;
 }
 
-#basicas1,#basicas2,#basicas3,#basicas4,#basicas5,#basicas6,#basicas7,#basicas8,#basicas9,#basicas10{
+.basicas{
 	width:100px;
 	margin-top:1px;
-	margin-left:2px;
+	margin-left:1px;
 	float:left;
-
 }
 
-#ciencias1,#ciencias2,#ciencias3,#ciencias4,#ciencias5,#ciencias6,#ciencias7,#ciencias8,#ciencias9,#ciencias10{
+.ciencias{
 	width:100px;
 	margin-left:1px;
 	float:left;
 	margin-top:1px;
 }
 
-#aplicadas1,#aplicadas2,#aplicadas3,#aplicadas4,#aplicadas5,#aplicadas6,#aplicadas7,#aplicadas8,#aplicadas9,#aplicadas10{
+.aplicadas{
 	width:100px;
 	margin-left:1px;
 	float:left;
 	margin-top:1px;
 }
-#economicas1,#economicas2,#economicas3,#economicas4,#economicas5,#economicas6,#economicas7,#economicas8,#economicas9,#economicas10{
+.economicas{
 	width:100px;
 	margin-left:1px;
 	float:left;
 	margin-top:1px;
 }
-#humanisticas1,#humanisticas2,#humanisticas3,#humanisticas4,#humanisticas5,#humanisticas6,#humanisticas7,#humanisticas8,#humanisticas9,#humanisticas10{
+.humanisticas{
 	width:100px;
 	margin-left:1px;
 	float:left;
 	margin-top:1px;
 }
-#complementarias1,#complementarias2,#complementarias3,#complementarias4,#complementarias5,#complementarias6,#complementarias7,#complementarias8,#complementarias9,#complementarias10{
+.complementarias{
 	width:100px;
 	margin-left:1px;
 	float:left;
 	margin-top:1px;
+}
+.prq{
+	float: right;	
 }
 #card{
 	width:auto;
