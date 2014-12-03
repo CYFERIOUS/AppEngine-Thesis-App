@@ -1,17 +1,25 @@
 package com.plan.modelo;
 
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
+
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
-
 import com.plan.modelo.Materia;
 
+
+@PersistenceCapable
+@javax.persistence.Entity
 public class Semestral {
 	
 	DatastoreService Sm = DatastoreServiceFactory.getDatastoreService();
 	
+	@Persistent
 	private long numCred;
+	@Persistent
 	private long time;
+	@Persistent
 	public long numSem;
 	Materia sum;
 

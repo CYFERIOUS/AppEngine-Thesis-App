@@ -1,19 +1,31 @@
 package com.plan.modelo;
 
+import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
+
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
-
 import com.plan.modelo.Semestral;
 import com.plan.modelo.Area;
 
+
+@PersistenceCapable
+@javax.persistence.Entity
 public class Programa {
 	
 	DatastoreService pg = DatastoreServiceFactory.getDatastoreService();
 	
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	public long Idcod;
+	@Persistent
 	public long registro;
+	@Persistent
 	public long numSem;
+	@Persistent
 	public String carrera;
 	
 	Area areos;

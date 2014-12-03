@@ -1,56 +1,70 @@
 package com.plan.modelo;
 
+import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
+
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 
 
-
+@PersistenceCapable
+@javax.persistence.Entity
 public class Materia {
 
 	DatastoreService Mt = DatastoreServiceFactory.getDatastoreService();
 	
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private long id;
+	@Persistent
 	private long semestre;
+	@Persistent
 	private long creditos;
+	@Persistent
 	private long horas;
+	@Persistent
 	private String Nombre;
+	@Persistent
 	private String area;
+	@Persistent
 	private long prerq;
+	@Persistent
 	private String tipos;
 	
-	public Materia(long id, long semestre, long creditos,long horas,String Nombre, String area,long prerq,String tipos){
+	public Materia(long id, long semestre, long creditos,long horas,String nomus, String area,long prerq,String tipos){
 		
 		this.setId(id);
 		this.setSemestre(semestre);
 		this.setCreditos(creditos);
 		this.setHoras(horas);
-		this.setNombre(Nombre);
+		this.setNombre(nomus);
 		this.setArea(area);
 		this.setPrerq(prerq);
 		this.setTipos(tipos);
 
 		Entity signature = new Entity("Materia",id);
-		signature.setProperty("semestre", semestre);
-		signature.setProperty("creditos", creditos);
+		signature.setProperty("Codigo", id);
+		signature.setProperty("Semestre", semestre);
+		signature.setProperty("Creditos", creditos);
 		signature.setProperty("Horas", horas);
-		signature.setProperty("Nombre", Nombre);
+		signature.setProperty("Nombre", nomus);
 		signature.setProperty("Area", area);
 		signature.setProperty("Pre-req", prerq);
-		signature.setProperty("typo", tipos);
+		signature.setProperty("Typo", tipos);
 		Mt.put(signature);
 			
 	}
 	
-	
-
 	public String getNombre() {
 		return Nombre;
 	}
 
 
-	public void setNombre(String nombre) {
-		Nombre = nombre;
+	public void setNombre(String name) {
+		this.Nombre = name;
 	}
 
 

@@ -1,13 +1,21 @@
 package com.plan.modelo;
 
 
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
+
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 
+@PersistenceCapable
+@javax.persistence.Entity
+
 public class Area {
 	
 	DatastoreService ar = DatastoreServiceFactory.getDatastoreService();
+	
+	@Persistent
 	public String[] nomar ;
 	
 	public Area(){

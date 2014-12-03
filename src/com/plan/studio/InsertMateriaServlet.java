@@ -13,7 +13,7 @@ public class InsertMateriaServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException {
 		//////variables de conexion
-		String nombre = request.getParameter("nombre");
+		String nomen = request.getParameter("nombre");
 		String area = request.getParameter("area");
 		String codex = request.getParameter("codest");
 		String semestre = request.getParameter("semestre");
@@ -28,8 +28,6 @@ public class InsertMateriaServlet extends HttpServlet {
 		long time = Long.parseLong(horas);
 		long prerq= Long.parseLong(pre);
 	
-		Materia matters = new Materia(code ,semNo,visa,time,nombre,area,prerq,typos);
-		
-		
+		Materia matters = new Materia(code ,semNo,visa,time,nomen,area,prerq,typos);		
 	}
 }

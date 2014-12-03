@@ -1,19 +1,27 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>ProofAppEngine</title>
-<script src="js/backEnd/respuesta.js"></script>
-<script src="js/frontEnd/db.js"> </script>
-<script src="js/frontEnd/constructor.js"> </script>
-<script src="js/frontEnd/builder.js"> </script>
-<link href="css/frontEnd/cssCell.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-
-<script>
-	builderFront();
-</script>
-<div id="footer" align="center"><iframe src="img/frontEnd/footer.svg" width="920" height="200" frameborder="0"></iframe></div>
-</body>
+    <head>
+    <meta charset="utf-8">
+    <title>ProofAppEngine</title>
+     <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+     <script type="text/javascript" src="js/frontEnd.constructor.js"> </script>
+          <script type="text/javascript" src="js/frontEnd.db.js"> </script>
+          <script type="text/javascript" src="js/frontEnd.builder.js"> </script>
+          <script type="text/javascript" src="js/backEnd.respuestaIndex.js"></script>
+          <script type="text/javascript" src="js/backEnd.respuestaFilters.js"></script> 
+          <script  type="text/javascript" src="js/backEnd.behaviors.js"></script>
+    <link href="css/frontEnd/cssCell.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+     
+   <div align="center">   
+	<div id="curtainMain" align="center"><iframe id="visorMain"></iframe></div>
+          <div id="footer" align="center">
+            <iframe src="img/frontEnd/footer.svg" width="1190" height="220" frameborder="0" scrolling="no"></iframe>
+          </div>
+           <div id="controller"> PRESIONE PARA CONVENCIONES</div>
+           <div id="controller2"> PRESIONE PARA CERRAR</div>
+     </div>
+   
+    </body>
 </html>

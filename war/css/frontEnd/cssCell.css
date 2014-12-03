@@ -1,24 +1,85 @@
 @charset "utf-8";
 /* CSS Document */
-#cabezote{
-	background-color: #f3f4f6;
-	width: 100%;
-	height: 80px;
-}
-#imagos{
-	background-image: url(../../img/common/logo.jpg);
-	background-repeat: no-repeat;
-	width: 64px;
-	height: 80px;
-	top: 0px;
-	float: left;
-	margin-top: 0px;
-	padding-top: 0px;
-}
+body{
 
-#stage{
+	overflow: scroll;
+	margin: 0px;
+	z-index:-1;
+}
+.cabezote{
+	position:relative;
+	width: 100%;
+	height: auto;
+	font-size:14px;
+	left:100px;
+	padding-bottom:10px;
+	z-index:-1;
+}
+#curtainMain{
+	position:absolute;
+	display:none;
 	width:100%;
 	height:100%;
+	background-color:#CCC;
+	z-index:1005;
+}
+#visorMain{
+	display: none;
+	position:absolute;
+	top:100px;
+	left:30%;
+	width: 800px;
+	height: 600px;
+	z-index: 1005;
+	background-color: #FFF;
+	border: thin solid #333;	
+}
+
+#mainInfo1{
+	font-size:12px;
+	position: relative;
+	float: left;
+}
+
+#imagos{
+	position:relative;
+	left:90%;
+	background-image: url(../../img/common/logo.jpg);
+	background-repeat: no-repeat;
+	width: 75px;
+	height: 80px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 0px;
+}
+#U{
+	position:relative;
+	left:45%;
+	top: 10px;
+}
+.headerSem{
+	
+	width: 100%;
+
+}
+.romanGod{
+	left:100px;
+	width: 100px;
+	float: left;
+	font-size: 14px;
+	position: relative;
+	bottom: 0px;
+	color: #333;
+	background-color: #0C3;
+	border-top-width: medium;
+	border-top-style: solid;
+	border-top-color: #900;
+	margin-right: 1px;	
+}
+#stage{
+	top:0px;
+	width:auto;
+	height:auto;
 	border-bottom-style:solid;
 	border-bottom-color:#900;
 	text-align:center;
@@ -26,44 +87,42 @@
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-weight: bolder;
-	color: #000;	
+	color: #000;
+	
+	
 }	
 
 .areaBig{
+
 	width: 100%;
 	height: 100%;
-	background-color: #CCC;
+	background-color: #FFF;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 8px;
 	font-weight: bolder;
 	float: left;
 	padding-left: 0px;
-	background-color: #EAEAEA;
 	border-bottom-width: thin;
 	border-bottom-style: solid;
-	border-bottom-color: #666;
+	border-bottom-color: #CCC;	
 }
+
 .sTittle{
-	
-	width: 100px;
-	height: auto;
+	width:100px;
+	height:200px;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 10px;
 	font-weight: bolder;
 	float: left;
 	background-color: #FFF;
-	border: medium solid #999;
-	margin: 2px;
-	
 }
-
 .sideEst{
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg);
-	transform: rotate(-90deg);
-	transform-origin: left top 0;
+	-webkit-transform: translate(0px,80px) rotate(-90deg);
+	-moz-transform: translate(0px,80px) rotate(-90deg);
+	-o-transform: translate(0px,80px) rotate(-90deg);
+	background-color: #FFF;
+	border: thin solid #999;
+	z-index:1001;
 }
 
 .basicas{	
@@ -81,7 +140,6 @@
 	border-left-color: #CCC;
 	background-color:#FFFFE1;
 }
-
 .ciencias{
 	width:100px;
 	margin-left:1px;
@@ -118,10 +176,8 @@
 	margin-top:1px;
 	background-color:#4199A5;
 }
-.prq{
-	float: right;	
-}
-#card{
+
+#card1{
 	float:left;
 	width:50px;
 	height:auto;
@@ -133,13 +189,71 @@
 	height:auto;
 	background-color:#9CF;
 }
-div[class^="bloque"]{
+#card3{
+	
+	float:left;
+	width:50px;
+	height:auto;
+	background-color:#660;
+}
+.bloque{
 	width: 100px;
 	height: 60px;
 	border-bottom-style: inset;
 	border-bottom-color: #000;
-	float:left;
 }
 #footer{
-	background-color:#EAEAEA;
+	
+	display:none;
+	width:100%;
+	height:210px;
+	position:fixed;
+	bottom:0px;
+	background-color:rgba(255,255,255,0.8);
+	box-shadow: 5px 0px 5px #888888;
+	z-index:1002;
 }
+
+#controller{
+	left:43%;
+	position:fixed;
+	bottom:0px;
+	width:300px;
+	background-color:#666;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #FFF;
+	border-top-right-radius:2em;
+	border-top-left-radius:2em;
+	box-shadow: 5px 0px 5px #888888;
+	cursor: pointer;
+	z-index:1003;
+}
+#controller2{
+	display:none;
+	left:43%;
+	position:fixed;
+	bottom:210px;
+	width:300px;
+	background-color:#666;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #FFF;
+	border-top-right-radius:2em;
+	border-top-left-radius:2em;
+	box-shadow: 5px 0px 5px #888888;
+	cursor: pointer;
+	z-index:1003;
+}
+#titulos{
+	float:left;
+	width:80;
+	height:50;
+	background-color:#00F;
+	color:#FFF;	
+}
+
+
+

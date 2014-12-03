@@ -7,24 +7,34 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
 		<servlet-name>PlanStudium</servlet-name>
 		<servlet-class>com.plan.studio.PlanStudiumServlet</servlet-class>
-		
 	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>PlanStudium</servlet-name>
-		<url-pattern>/planstudium</url-pattern>
-		
+		<url-pattern>/planstudium</url-pattern>	
 	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>InsertMateria</servlet-name>
 		<servlet-class>com.plan.studio.InsertMateriaServlet</servlet-class>
-		
 	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>InsertMateria</servlet-name>
 		<url-pattern>/insertmateria</url-pattern>	
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>FilterMateria</servlet-name>
+		<servlet-class>com.plan.studio.FiltrosPerSemester</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>FilterMateria</servlet-name>
+		<url-pattern>/filtermateria</url-pattern>	
+	</servlet-mapping>
+	
 	<welcome-file-list>
-		<welcome-file>indexAdmin.html</welcome-file>
+		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 </web-app>
