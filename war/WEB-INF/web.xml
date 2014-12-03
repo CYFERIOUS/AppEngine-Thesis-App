@@ -25,6 +25,26 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>DeleteMateria</servlet-name>
+		<servlet-class>com.plan.studio.DeleteMateriaServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteMateria</servlet-name>
+		<url-pattern>/deletemateria</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateMateria</servlet-name>
+		<servlet-class>com.plan.studio.UpdateMateriaServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateMateria</servlet-name>
+		<url-pattern>/updatemateria</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>FilterMateria</servlet-name>
 		<servlet-class>com.plan.studio.FiltrosPerSemester</servlet-class>
 	</servlet>

@@ -6,6 +6,8 @@ import javax.jdo.annotations.Persistent;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.KeyFactory;
+import com.google.appengine.api.datastore.*;
 import com.plan.modelo.Materia;
 
 
@@ -35,6 +37,7 @@ public Semestral( long numSem){
 		semester.setProperty("Creditos", numCred);
 		semester.setProperty("No.Horas", time);
 		Sm.put(semester);
+		Key semKey = KeyFactory.createKey("semKey", semester.getKey().toString());
 		}
 		
 }

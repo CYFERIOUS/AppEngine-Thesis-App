@@ -1,13 +1,12 @@
 package com.plan.modelo;
 
+import javax.jdo.PersistenceManager;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.*;
 
 
 @PersistenceCapable
@@ -55,6 +54,8 @@ public class Materia {
 		signature.setProperty("Pre-req", prerq);
 		signature.setProperty("Typo", tipos);
 		Mt.put(signature);
+		
+		Key matKey = KeyFactory.createKey("signKey", signature.getKey().toString());
 			
 	}
 	

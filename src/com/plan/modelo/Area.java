@@ -3,10 +3,7 @@ package com.plan.modelo;
 
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
-
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.*;
 
 @PersistenceCapable
 @javax.persistence.Entity
@@ -34,6 +31,9 @@ public class Area {
 		Entity areal = new Entity("Areas",i);
 		areal.setProperty("NombreArea", nomar[i]);
 		ar.put(areal);
+		Key arKey = KeyFactory.createKey("areaKey", areal.getKey().toString());
 		}	
+		
+		
 	}
 }

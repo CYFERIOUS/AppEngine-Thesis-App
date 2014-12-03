@@ -1,17 +1,23 @@
 package com.plan.studio;
 
 import java.io.IOException;
+
+import javax.persistence.EntityManager;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import com.plan.modelo.Materia;
+import com.plan.dao.Dao;
 
 @SuppressWarnings("serial")
 public class InsertMateriaServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException {
+		
+		 
 		//////variables de conexion
 		String nomen = request.getParameter("nombre");
 		String area = request.getParameter("area");
@@ -28,6 +34,8 @@ public class InsertMateriaServlet extends HttpServlet {
 		long time = Long.parseLong(horas);
 		long prerq= Long.parseLong(pre);
 	
-		Materia matters = new Materia(code ,semNo,visa,time,nomen,area,prerq,typos);		
+		Materia matters = new Materia(code ,semNo,visa,time,nomen,area,prerq,typos);
+		Dao.INSTANCE.addMateria(code ,semNo,visa,time,nomen,area,prerq,typos);
+		
 	}
 }
