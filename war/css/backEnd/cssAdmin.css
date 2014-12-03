@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin:0;
+	padding:0;
+	background-color: #CCC;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	font-weight: bolder;
+}
+.container {
+	height: auto;
+	width: 300px;
+	
+}
+#curtain{
+	display:none;
+	width:100%;
+	height:100%;
+	position:fixed;
+	background-color:#09F;
+	opacity: 0.6;
+}
+#matterLoad{
+	display:none;
+	position:fixed;
+	left:50%;
+	background-color:#000;
+	width:300px;
+	height:300px;
+	margin-left: -150px;
+}
+#contiene{
+	float: left;
+	position: absolute;
+	margin: 0px;
+	padding-top: 50px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#myDiv{
+	
+	font-size: 10px;
+	background-color: #0CF;
+	width: 100px;
+	height: 220px;
+	
+}
+#control{
+	font-size: 10px;
+	background-color: #F96;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	alignment-adjust: baseline;
+	border-bottom-width: medium;
+	border-bottom-style: solid;
+	border-bottom-color: #369;
+	border-top-width: 10px;
+	border-top-style: outset;
+	border-top-color: #666;
+}
+#visir{
+	font-size: 12px;
+	background-color: #F96;
+	color: #000;
+	width: 100%;
+	height: auto;
+	alignment-adjust: baseline;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	border-top-width: thin;
+	border-top-style: outset;
+	border-top-color: #CCC;
+	padding: 5px;
+}

@@ -1,0 +1,60 @@
+      /////TOTALES
+	            json.put("Materias",totalMat);
+	            json.put("Areas",totalArea);
+	             json.put("Semestres",totalSemestre);
+	             /////SEMESTRES
+	             json.put("primero", first);
+	             json.put("segundo", second);
+	             json.put("tercero", third);
+	             json.put("cuarto", fourth);
+	             json.put("quinto", fifth);
+	             json.put("sexto", sixth);
+	             json.put("septimo", seventh);
+	             json.put("octavo", eighth);
+	             json.put("noveno", nineth);
+	             json.put("decimo", tenth);
+
+
+//////FILTRO DE SEMESTRES POR MATERIA
+	Query uno = new Query("Materia").addFilter("semestre",FilterOperator.EQUAL, 1);
+	PreparedQuery one =  ob.prepare(uno);
+	Query dos = new Query("Materia").addFilter("semestre",FilterOperator.EQUAL, 2);
+	PreparedQuery two =  ob.prepare(dos);
+	Query tres = new Query("Materia").addFilter("semestre",FilterOperator.EQUAL, 3);
+	PreparedQuery three =  ob.prepare(tres);
+	Query cuatro = new Query("Materia").addFilter("semestre",FilterOperator.EQUAL, 4);
+	PreparedQuery four =  ob.prepare(cuatro);
+	Query cinco= new Query("Materia").addFilter("semestre",FilterOperator.EQUAL, 5);
+	PreparedQuery five =  ob.prepare(cinco);
+	Query seis = new Query("Materia").addFilter("semestre",FilterOperator.EQUAL, 6);
+	PreparedQuery six =  ob.prepare(seis);
+	Query siete = new Query("Materia").addFilter("semestre",FilterOperator.EQUAL, 7);
+	PreparedQuery seven =  ob.prepare(siete);
+	Query ocho = new Query("Materia").addFilter("semestre",FilterOperator.EQUAL, 8);
+	PreparedQuery eight =  ob.prepare(ocho);
+	Query nueve = new Query("Materia").addFilter("semestre",FilterOperator.EQUAL, 9);
+	PreparedQuery nine =  ob.prepare(nueve);
+	Query diez = new Query("Materia").addFilter("semestre",FilterOperator.EQUAL, 10);
+	PreparedQuery ten =  ob.prepare(diez);
+	
+	int totalSemestre = ob.prepare(s).countEntities(FetchOptions.Builder.withDefaults());
+	int totalArea = ob.prepare(a).countEntities(FetchOptions.Builder.withDefaults());
+	int totalMat = dt.prepare(q).countEntities(FetchOptions.Builder.withDefaults());
+
+
+
+int first = ob.prepare(uno).countEntities(FetchOptions.Builder.withDefaults());
+	int second = ob.prepare(dos).countEntities(FetchOptions.Builder.withDefaults());	
+	int third= ob.prepare(tres).countEntities(FetchOptions.Builder.withDefaults());
+	int fourth= ob.prepare(cuatro).countEntities(FetchOptions.Builder.withDefaults());
+	int fifth= ob.prepare(cinco).countEntities(FetchOptions.Builder.withDefaults());
+	int sixth= ob.prepare(seis).countEntities(FetchOptions.Builder.withDefaults());
+	int seventh= ob.prepare(siete).countEntities(FetchOptions.Builder.withDefaults());
+	int eighth= ob.prepare(ocho).countEntities(FetchOptions.Builder.withDefaults());
+	int nineth= ob.prepare(nueve).countEntities(FetchOptions.Builder.withDefaults());
+	int tenth= ob.prepare(diez).countEntities(FetchOptions.Builder.withDefaults());
+		
+
+
+<script  type="text/javascript"src="js/common/jquery-2.1.0.min.js"></script>
+	

@@ -1,0 +1,14 @@
+<load-on-startup>1</load-on-startup>
+$.ajax({
+		type:"POST",
+		url: "../../planstudium",
+		data:{nombre:datos},  
+		dataType:"json",
+		async:true, 
+		success: function(data) {               
+			alert(datos);
+		},
+		error: function(data) {
+			alert("ERROR AL CARGAR--TRY AGAIN:(");
+		}
+	});
