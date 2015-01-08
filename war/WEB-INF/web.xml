@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>PlanStudium</servlet-name>
+		<servlet-class>com.plan.studio.PlanStudiumServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>PlanStudium</servlet-name>
+		<url-pattern>/planstudium</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>InsertMateria</servlet-name>
+		<servlet-class>com.plan.studio.InsertMateriaServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>InsertMateria</servlet-name>
+		<url-pattern>/insertmateria</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteMateria</servlet-name>
+		<servlet-class>com.plan.studio.DeleteMateriaServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteMateria</servlet-name>
+		<url-pattern>/deletemateria</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateMateria</servlet-name>
+		<servlet-class>com.plan.studio.UpdateMateriaServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateMateria</servlet-name>
+		<url-pattern>/updatemateria</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FilterMateria</servlet-name>
+		<servlet-class>com.plan.studio.FiltrosPerSemester</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>FilterMateria</servlet-name>
+		<url-pattern>/filtermateria</url-pattern>	
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
