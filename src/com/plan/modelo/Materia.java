@@ -28,7 +28,6 @@ public class Materia {
 	
 	public Materia(long id, long semestre, long creditos,long horas,String nomus, String area,long prerq,String tipos){
 		
-		
 		this.id = id;
 		this.semestre = semestre;
 		this.creditos = creditos;
