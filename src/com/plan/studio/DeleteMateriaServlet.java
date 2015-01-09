@@ -12,7 +12,6 @@ public class DeleteMateriaServlet extends HttpServlet {
 			throws IOException {
 		
 		String codex = request.getParameter("codest");
-		
 		Dao.INSTANCE.deleteMateria(codex);
 				
 		}

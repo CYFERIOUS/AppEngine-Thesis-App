@@ -8,23 +8,23 @@ public enum Dao {
 	INSTANCE;
 	
 	  public void addMateria(long id, long semestre, long creditos,long horas,String nomus, String area,long prerq,String tipos) {
-		  synchronized (this) {
-		  		EntityManager em = EMFService.get().createEntityManager();
-		    	Materia matter = new Materia(id,semestre,creditos,horas,nomus, area, prerq, tipos);	    	
-		    	/*matter.setId(id);
+		  EntityManager em = EMFService.get().createEntityManager();
+		  
+		    try {
+		    	Materia matter = em.find(Materia.class, id);
+		    	matter.setId(id);
 		    	matter.setSemestre(semestre);
 		    	matter.setCreditos(creditos);
 		    	matter.setHoras(horas);
 		    	matter.setNombre(nomus);
 		    	matter.setArea(area);
 		    	matter.setPrerq(prerq);
-		    	matter.setTipos(tipos);*/
-		    	
-		    	//Materia matters = 
-		    	
+		    	matter.setTipos(tipos);
 		    	em.persist(matter);
-		    	em.close();
-		  	}
+		    } finally {
+		      em.close();
+		    }
+
 		  }
 	  
 	  public void updateMateria(long id, long semestre, long creditos,long horas,String nomus, String area,long prerq,String tipos) {
@@ -50,7 +50,6 @@ public enum Dao {
 		  EntityManager em = EMFService.get().createEntityManager();
 		    try {
 		    Materia matter = em.find(Materia.class, codux);
-		  //  matter.destroyMateria(codux);
 		     em.remove(matter);
 		    } finally {
 		      em.close();

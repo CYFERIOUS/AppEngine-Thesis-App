@@ -1,44 +1,41 @@
 package com.plan.modelo;
 
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.jdo.PersistenceManager;
+import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
 
 import com.google.appengine.api.datastore.*;
 
 
-
-@Entity
+@PersistenceCapable
+@javax.persistence.Entity
 public class Materia {
 
-	//DatastoreService Mt = DatastoreServiceFactory.getDatastoreService();
+	DatastoreService Mt = DatastoreServiceFactory.getDatastoreService();
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@PrimaryKey
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private long id;
+	@Persistent
 	private long semestre;
+	@Persistent
 	private long creditos;
+	@Persistent
 	private long horas;
+	@Persistent
 	private String Nombre;
+	@Persistent
 	private String area;
+	@Persistent
 	private long prerq;
+	@Persistent
 	private String tipos;
 	
 	public Materia(long id, long semestre, long creditos,long horas,String nomus, String area,long prerq,String tipos){
 		
-		
-		this.id = id;
-		this.semestre = semestre;
-		this.creditos = creditos;
-		this.horas = horas;
-		this.Nombre = nomus;
-		this.area = area;
-		this.prerq = prerq;
-		this.tipos = tipos;
-		
-		/*this.setId(id);
+		this.setId(id);
 		this.setSemestre(semestre);
 		this.setCreditos(creditos);
 		this.setHoras(horas);
@@ -56,14 +53,10 @@ public class Materia {
 		signature.setProperty("Area", area);
 		signature.setProperty("Pre-req", prerq);
 		signature.setProperty("Typo", tipos);
-		Mt.put(signature);*/
+		Mt.put(signature);
 		
-		//Key matKey = KeyFactory.createKey("signKey", signature.getKey().toString());
+		Key matKey = KeyFactory.createKey("signKey", signature.getKey().toString());
 			
-	}
-	
-	public void destroyMateria(Key id){
-		//Mt.delete(id);
 	}
 	
 	public String getNombre() {
@@ -74,6 +67,8 @@ public class Materia {
 	public void setNombre(String name) {
 		this.Nombre = name;
 	}
+
+
 
 	public long getId() {
 		return id;
@@ -104,6 +99,8 @@ public class Materia {
 		this.creditos = creditos;
 	}
 
+
+	
 
 	public long getHoras() {
 		return horas;

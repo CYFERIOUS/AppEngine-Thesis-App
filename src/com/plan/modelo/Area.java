@@ -8,20 +8,16 @@ import com.google.appengine.api.datastore.*;
 @PersistenceCapable
 @javax.persistence.Entity
 
-
-
 public class Area {
 	
 	DatastoreService ar = DatastoreServiceFactory.getDatastoreService();
 	
-	public String[] nomar ;
 	@Persistent
-	private long numArea;
+	public String[] nomar ;
 	
-	
-	public Area(long numArea){
+	public Area(){
 			
-	nomar = new String[(int) numArea];
+	nomar = new String[7];
 	
 	nomar [0] = null;
 	nomar [1] = "Ciencias Basicas";

@@ -18,82 +18,38 @@ public class Programa {
 	
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	private String carrera;
+	public long Idcod;
 	@Persistent
-	private long registro;
+	public long registro;
 	@Persistent
-	private String nombre;
+	public long numSem;
 	@Persistent
-	private long numSem;
-	@Persistent
-	private long numArea;
-	@Persistent
-	private String grupo;
-	@Persistent
+	public String carrera;
 	
 	Area areos;
 	Semestral semes;
 	Materia matters;
 	
-	public Programa(String carrera,long registro,long numSem,long numArea,String grupo){
+	public Programa(long Idcod,long registro,long numSem,String carrera){
 		
-		this.setCarrera(carrera);
-		this.setRegistro(registro);
-		this.setNombre(carrera);
-		this.setnumSem(numSem);
-		this.setnumArea(numArea);
-		this.setGrupo(carrera);
+		this.Idcod = Idcod;
+		this.registro = registro;
+		this.numSem = numSem;
+		this.carrera = carrera;
 		
 		semes = new Semestral(numSem);
-		areos = new Area(numArea);
+		areos = new Area();
+		matters = new Materia(numSem, numSem, numSem, numSem, carrera, carrera, numSem, carrera);
 		
-		
-		Entity programa = new Entity("Programa",carrera);
-		programa.setProperty("Areas", registro);
-		programa.setProperty("Registro", registro);
+		Entity programa = new Entity("Programa",Idcod);
+		programa.setProperty("registro", registro);
 		programa.setProperty("Semestres", numSem);
 		programa.setProperty("Nombre", carrera);
-		programa.setProperty("Grupo", carrera);
+		programa.setProperty("Materias", matters);
 		Key promKey = KeyFactory.createKey("promKey", programa.getKey().toString());
 		pg.put(programa);
 		
 	}
 	
-	public void setCarrera(String name){
-		this.carrera = name;
-	}
-	public String getCarrera(){
-		return carrera;
-	}
-	public void setRegistro(long reg){
-		this.registro = reg;
-	}
-	public long getRegistro(){
-		return registro;
-	}
-	public void setNombre(String name){
-		this.nombre = name;
-	}
-	public String getNombre(){
-		return nombre;
-	}
-	public void setnumSem(long number){
-		this.numSem = number;
-	}
-	public long getnumSem(){
-		return numSem;
-	}
-	public void setnumArea(long number){
-		this.numArea = number;
-	}
-	public long getnumArea(){
-		return numArea;
-	}
-	public void setGrupo(String name){
-		this.grupo = name;
-	}
-	public String getGrupo(){
-		return grupo;
-	}
 
 }

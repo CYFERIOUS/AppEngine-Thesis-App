@@ -2,15 +2,13 @@ package com.plan.studio;
 
 import java.io.IOException;
 
+import javax.persistence.EntityManager;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.appengine.api.users.User;
-import com.google.appengine.api.users.UserService;
-import com.google.appengine.api.users.UserServiceFactory;
 
-
+import com.plan.modelo.Materia;
 import com.plan.dao.Dao;
 
 @SuppressWarnings("serial")
@@ -36,8 +34,8 @@ public class InsertMateriaServlet extends HttpServlet {
 		long time = Long.parseLong(horas);
 		long prerq= Long.parseLong(pre);
 	
+		Materia matters = new Materia(code ,semNo,visa,time,nomen,area,prerq,typos);
+		Dao.INSTANCE.addMateria(code ,semNo,visa,time,nomen,area,prerq,typos);
 		
-		Dao.INSTANCE.addMateria(code,semNo,visa,time,nomen,area,prerq,typos);
-				
 	}
 }
