@@ -34,7 +34,7 @@ public class InsertMateriaServlet extends HttpServlet {
 		long time = Long.parseLong(horas);
 		long prerq= Long.parseLong(pre);
 	
-		Materia matters = new Materia(code ,semNo,visa,time,nomen,area,prerq,typos);
+		//Materia matters = new Materia(code ,semNo,visa,time,nomen,area,prerq,typos);
 		Dao.INSTANCE.addMateria(code ,semNo,visa,time,nomen,area,prerq,typos);
 		
 	}

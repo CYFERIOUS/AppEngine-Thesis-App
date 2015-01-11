@@ -1,41 +1,42 @@
 package com.plan.modelo;
 
-import javax.jdo.PersistenceManager;
-import javax.jdo.annotations.IdGeneratorStrategy;
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import com.google.appengine.api.datastore.*;
 
 
-@PersistenceCapable
-@javax.persistence.Entity
+@Entity
 public class Materia {
 
 	DatastoreService Mt = DatastoreServiceFactory.getDatastoreService();
 	
-	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	@Persistent
 	private long semestre;
-	@Persistent
 	private long creditos;
-	@Persistent
 	private long horas;
-	@Persistent
 	private String Nombre;
-	@Persistent
 	private String area;
-	@Persistent
 	private long prerq;
-	@Persistent
 	private String tipos;
 	
 	public Materia(long id, long semestre, long creditos,long horas,String nomus, String area,long prerq,String tipos){
 		
-		this.setId(id);
+		
+		this.id = id;
+		this.semestre = semestre;
+		this.creditos = creditos;
+		this.Nombre = nomus;
+		this.area = area;
+		this.prerq = prerq;
+		this.tipos = tipos;
+	
+		
+		/*this.setId(id);
 		this.setSemestre(semestre);
 		this.setCreditos(creditos);
 		this.setHoras(horas);
@@ -55,7 +56,7 @@ public class Materia {
 		signature.setProperty("Typo", tipos);
 		Mt.put(signature);
 		
-		Key matKey = KeyFactory.createKey("signKey", signature.getKey().toString());
+		Key matKey = KeyFactory.createKey("signKey", signature.getKey().toString());*/
 			
 	}
 	
